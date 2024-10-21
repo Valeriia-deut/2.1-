@@ -19,7 +19,6 @@ n5 = 5
 result = n5 * 10000 + n4 * 1000 + n3 * 100 + n2 * 10 + n1
 print(result)
 
-
 number = 37568
 n1 = 3
 n2 = 7
