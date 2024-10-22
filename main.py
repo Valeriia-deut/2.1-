@@ -27,3 +27,59 @@ n4 = 6
 n5 = 8
 result = n5 * 10000 + n4 * 1000 + n3 * 100 + n2 * 10 + n1
 print(result)
+
+
+
+
+
+
+
+first_lst = [12, 3, 4, 10 ]  #  завдання 3.2
+
+first_lst.insert(0, 10) # через insert(індекс, число) додаємо число.
+print(first_lst)
+first_lst = [10, 12, 3, 4, 10]
+x = first_lst.pop()             #значення х видаляє останній елемент в рядку.
+print(x)
+print(first_lst) # результат [10, 12, 3, 4]
+
+
+second_lst = [12, 3, 4, 10, 8]
+second_lst. insert (0,8)
+print(second_lst)
+x = second_lst.pop()             #значення х() видаляє останній елемент в рядку.
+print(x)
+print(second_lst)
+
+
+
+
+my_lst = [1, 2, 3, 4, 5, 6]         #завдання 3.3
+first_lst, second_lst = [[1, 2, 3],[ 4, 5, 6]]
+print(first_lst)
+print(second_lst)
+print(my_lst)
+
+my_lst = [1, 2, 3]
+first_lst, second_lst = [[1, 2],[3]]
+print(first_lst)
+print(second_lst)
+print(my_lst)
+
+my_lst = [1, 2, 3, 4, 5]
+first_lst, second_lst = [[1, 2, 3],[ 4, 5]]
+print(first_lst)
+print(second_lst)
+print(my_lst)
+
+my_lst = [1]
+first_lst, second_lst = [[1],[]]
+print(first_lst)
+print(second_lst)
+print(my_lst)
+
+my_lst = []
+first_lst, second_lst = [[],[]]
+print(first_lst)
+print(second_lst)
+print(my_lst)
