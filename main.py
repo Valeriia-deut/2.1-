@@ -86,62 +86,138 @@
 
 #Завдання 4.1
 
- lst_nums = [0, 1, 0, 12, 3]
- count_of_zero = lst_nums.count(0)  #count(0) покаже скільки нулів ми маємо в рядку
- print(count_of_zero)  #2
- lst_nums.remove(0)   #по черзі видаляємо нулі
- print(lst_nums)
- lst_nums.remove(0)
- print(lst_nums)
- lst_nums.append(0)   # по черзі додаємо нулі
- print(lst_nums)
- lst_nums.append(0)
- print(lst_nums)   # [1, 12, 3, 0, 0]
+#  lst_nums = [0, 1, 0, 12, 3]
+#  count_of_zero = lst_nums.count(0)  #count(0) покаже скільки нулів ми маємо в рядку
+#  print(count_of_zero)  #2
+#  lst_nums.remove(0)   #по черзі видаляємо нулі
+#  print(lst_nums)
+#  lst_nums.remove(0)
+#  print(lst_nums)
+#  lst_nums.append(0)   # по черзі додаємо нулі
+#  print(lst_nums)
+#  lst_nums.append(0)
+#  print(lst_nums)   # [1, 12, 3, 0, 0]
+#
+#
+# my_list = [1, 0, 13, 0, 0, 0, 5]
+# my_list.append(0)
+# my_list.append(0)
+# my_list.append(0)
+# my_list.append(0)
+# print(my_list)
+# my_list.pop(1)
+# print(my_list)
+# my_list.pop(2)
+# print(my_list)
+# my_list.pop(2)
+# print(my_list)
+# my_list.pop(2)
+# print(my_list)
+#
+#
+# second_list = [9, 0, 7, 31, 0, 45, 0, 45, 0, 45, 0, 0, 96, 0]
+# second_list.insert(-1, 0)
+# print(second_list)
+# second_list.insert(-2, 0)
+# print(second_list)
+# second_list.insert(-3, 0)
+# print(second_list)
+# second_list.insert(-4, 0)
+# print(second_list)
+# second_list.insert(-5, 0)
+# print(second_list)
+# second_list.insert(-6, 0)
+# print(second_list) # [9, 0, 7, 31, 0, 45, 0, 45, 0, 45, 0, 0, 96, 0, 0, 0, 0, 0, 0, 0]
+# del second_list[1]
+# print(second_list)
+# del second_list[3]
+# print(second_list)
+# del second_list[4]
+# del second_list[5]
+# print(second_list)
+# del second_list[6]
+# print(second_list)
+# del second_list[6]
+# print(second_list) #[9, 7, 31, 45, 45, 45, 96, 0, 0, 0, 0, 0, 0, 0]
+#
+# my_list = [0]
+# del my_list[0]
+# print(my_list)
+# my_list.append(0)
+# print(my_list)
 
 
-my_list = [1, 0, 13, 0, 0, 0, 5]
-my_list.append(0)
-my_list.append(0)
-my_list.append(0)
-my_list.append(0)
-print(my_list)
-my_list.pop(1)
-print(my_list)
-my_list.pop(2)
-print(my_list)
-my_list.pop(2)
-print(my_list)
-my_list.pop(2)
-print(my_list)
+#  Завдання 5.3
+import string
+first_name = 'Python'
+second_name =  'Comunity'
+my_string = f"{first_name + second_name}" # з'єднуємо першу та другу частину назви
+print(my_string)
+input_text = 'Python Comunity'
+my_string = input_text.split() # видаляємо пробіли
+text_new = []  # створюємо новий список
+
+for word in my_string:
+    for letter in word:
+        if letter in string.punctuation:
+            word = word.replace(letter, '')
+
+    text_new.append(word.capitalize())
+
+hashtag = "#" + "".join(text_new) #  додаємо хештег
+print(hashtag)
+
+if len(hashtag)> 25: # умова що наш список більше ніже 25 значень
+hashtag = hashtag[:20] # даємо умову до 20 значень
+print(hashtag) #PythonComunity
+
+import string
+input_text = 'Python Comunity'
+
+my_words = input_text.split()
+words_new=[]
+
+for word in my_words:
+    for letter in word:
+        if letter in string.punctuation:
+            word = word.replace(letter, '')
+
+    words_new.append(word.capitalize())
+
+hashtag = "#" + "".join(words_new)
 
 
-second_list = [9, 0, 7, 31, 0, 45, 0, 45, 0, 45, 0, 0, 96, 0]
-second_list.insert(-1, 0)
-print(second_list)
-second_list.insert(-2, 0)
-print(second_list)
-second_list.insert(-3, 0)
-print(second_list)
-second_list.insert(-4, 0)
-print(second_list)
-second_list.insert(-5, 0)
-print(second_list)
-second_list.insert(-6, 0)
-print(second_list) # [9, 0, 7, 31, 0, 45, 0, 45, 0, 45, 0, 0, 96, 0, 0, 0, 0, 0, 0, 0]
-del second_list[1]
-print(second_list)
-del second_list[3]
-print(second_list)
-del second_list[4]
-del second_list[5]
-print(second_list)
-del second_list[6]
-print(second_list)
-del second_list[6]
-print(second_list) #[9, 7, 31, 45, 45, 45, 96, 0, 0, 0, 0, 0, 0, 0]
+if len(hashtag)> 25:
+    hashtag = hashtag[:20]
+print(hashtag)
 
-my_list = [0]
-del my_list[0]
-print(my_list)
-my_list.append(0)
-print(my_list)
+import string
+input_text = 'i like python community!'
+new_text = []
+one_text = input_text.split()
+
+for word in one_text:
+    for letter in word:
+        if letter in string.punctuation:
+            word = word.replace(letter, '')
+    new_text.append(word.capitalize())
+hashtag =  "#"+"".join(new_text)
+print(hashtag)
+
+
+import string
+input_text = 'Should, I. subscribe? Yes!'
+new_text = []
+one_text = input_text.split()
+
+for word in one_text:
+    for letter in word:
+        if letter in string.punctuation:
+            word = word.replace(letter,"")
+
+    new_text.append(word.capitalize())
+
+hashtag =  "#" + "".join(new_text)
+if len(hashtag) > 140:
+    hashtag = hashtag [:40]
+print(hashtag)
